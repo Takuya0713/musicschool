@@ -1,0 +1,2 @@
+C:\Users\1\Local Sites\musicschool\app\public\wp-content\themes
+→themesフォルダ内に共有ファイルを置く

@@ -1,0 +1,41 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// パンくずリスト
+.c-breadcrumbs {
+  background: $gray;
+  .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    @include sp {
+      line-height: 1.4;
+      overflow-x: scroll;
+      /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+      -ms-overflow-style: none;
+      /*Firefoxへの対応*/
+      scrollbar-width: none;
+      /*Google Chrome、Safariへの対応*/
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+  }
+  &__text {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #000;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    @include sp {
+      height: 3.6rem;
+      white-space: nowrap;
+    }
+  }
+  &__sign {
+    display: block;
+    font-size: 1.6rem;
+  }
+}
